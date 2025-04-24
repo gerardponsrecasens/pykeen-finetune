@@ -605,7 +605,7 @@ class TrainingLoop(Generic[BatchType], ABC):
         # Force weight initialization if training continuation is not explicitly requested.
         if not continue_training:
             # Reset the weights
-            self.model.reset_parameters_()
+            #self.model.reset_parameters_()
             # afterwards, some parameters may be on the wrong device
             self.model.to(get_preferred_device(self.model, allow_ambiguity=True))
 
